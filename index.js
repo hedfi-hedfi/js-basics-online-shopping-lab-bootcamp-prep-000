@@ -16,7 +16,14 @@ function addToCart(item) {
 }
 
 function viewCart() {
-
+  if(!cart.length) { return 'Your shopping cart is empty.'; }
+  var items = [];
+  for(let i = 0; i < cart.length; i++) {
+    items.push(cart[i]);
+  }
+  if(items.length === 1) {
+    return `In your cart, you have ${items}.`;
+  }
 }
 
 function total() {
