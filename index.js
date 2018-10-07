@@ -22,7 +22,7 @@ function viewCart() {
     items.push(`${cart[0].itemName} at $${cart[0].itemPrice}`);
   }
   if(items.length === 1) {
-    return `In your cart, you have ${item[0]}.`;
+    return `In your cart, you have ${items[0]}.`;
   }
   else if(items.length === 2) {
     return `In your cart, you have ${items.join(', and ')}.`;
