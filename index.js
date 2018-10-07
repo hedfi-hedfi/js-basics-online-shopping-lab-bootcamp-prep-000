@@ -25,7 +25,7 @@ function viewCart() {
     return `In your cart, you have ${item[0]}.`;
   }
   else if(items.length === 2) {
-    return `In your cart, you have ${items[0].itemName} at $${items[0].itemPrice}.`;
+    return `In your cart, you have ${items.join(', and ')}.`;
   }
 }
 
