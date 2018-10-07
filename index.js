@@ -19,13 +19,13 @@ function viewCart() {
   if(!cart.length) { return 'Your shopping cart is empty.'; }
   var items = [];
   for(let i = 0; i < cart.length; i++) {
-    items.push(`${cart[0].itemName} at $${cart[0].itemPrice}`);
+    items.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
   }
   if(items.length === 1) {
     return `In your cart, you have ${items[0]}.`;
   }
   else if(items.length === 2) {
-    return `In your cart, you have ${items.join(", and ")}.`;
+    return `In your cart, you have ${items.join(', and ')}.`;
   }
 }
 
