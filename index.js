@@ -45,7 +45,7 @@ function removeFromCart(item) {
   for(let i = 0; i < getCart.length; i++) {
     if(getCart[i].itemName === item){
       exist = true;
-      getCart.splice(i, 1);
+      cart.splice(i, 1);
     }
   }
   if(!exist) {
