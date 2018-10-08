@@ -42,8 +42,8 @@ function total() {
 
 function removeFromCart(item) {
   var exist = false;
-  for(let i = 0; i < getCart.length; i++) {
-    if(getCart[i].itemName === item){
+  for(let i = 0; i < cart.length; i++) {
+    if(cart[i].itemName === item){
       exist = true;
       cart.splice(i, 1);
     }
