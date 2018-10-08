@@ -27,6 +27,9 @@ function viewCart() {
   else if(items.length === 2) {
     return `In your cart, you have ${items.join(', and ')}.`;
   }
+  else {
+    return `In your cart, you have ${items.slice(0, items.length - 3).join(' , ')}, ${items.slice(-2).join(', and ')}.`;
+  }
 }
 
 function total() {
