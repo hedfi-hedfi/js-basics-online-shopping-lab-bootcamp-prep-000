@@ -41,7 +41,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  exist = false;
+  var exist = false;
   for(let i = 0; i < cart.length; i++) {
     if(cart[i].itemName === item){
       exist = true;
