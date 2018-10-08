@@ -42,10 +42,10 @@ function total() {
 
 function removeFromCart(item) {
   var exist = false;
-  for(let i = 0; i < cart.length; i++) {
-    if(cart[i].itemName === item){
+  for(let i = 0; i < getCart.length; i++) {
+    if(getCart[i].itemName === item){
       exist = true;
-      cart.splice(i, 1);
+      getCart.splice(i, 1);
     }
   }
   if(!exist) {
@@ -57,7 +57,7 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   if(cardNumber){
     var t = total();
-    cart = [];
+    setCart([]);
     return `Your total cost is $${t}, which will be charged to the card ${cardNumber}.`
   }
   return 'Sorry, we don\'t have a credit card on file for you.';
